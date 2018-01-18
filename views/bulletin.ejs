@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Best Bulletin board</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Best Bulletin Board</h1>
+
+     
+
+        <form action="/bulletin/add/" method="post">
+
+            <h5> New Post</h5>
+            <p>
+               
+                <input type="text" name="username" id="newuser" placeholder="UserName">
+                <input type="text" name="newpost" id="newpost" autofocus />
+                <input type="submit" />
+            </p>
+
+            
+            <ul>
+        <% bulletin.forEach(function(bulletin, index) { %>
+            <li><a href="/bulletin/delete/<%= index %>">✘</a> <%= bulletin %></li>
+        <% }); %>
+        </ul>
+
+        </form>
+    </body>
+</html>
+
