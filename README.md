@@ -15,7 +15,7 @@ once you clone this repo, enter the files by CD-ing into then in the terminal an
 
 node src/app.js
 
-######this should run the app and in your terminal you should see "listening"
+###### this should run the app and in your terminal you should see "listening"
 
 ## after your app is running:
 
