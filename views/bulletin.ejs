@@ -13,24 +13,37 @@
 
      
 
+     <h5> New Post</h5>
+
         <form action="/bulletin/add/" method="post">
 
-            <h5> New Post</h5>
-            <p>
+            
+            
                
-                <input type="text" name="username" id="newuser" placeholder="UserName">
-                <input type="text" name="newpost" id="newpost" autofocus />
-                <input type="submit" />
-            </p>
+                UserName: <input type="text" name="username" id="newuser" >     <br>
+                <input type="text" name="newpost" id="newpost" autofocus placeholder="insert post content here"/>
+                <br>
+                <input type="submit" value="submit" />
+            
 
             
-            <ul>
-        <% bulletin.forEach(function(bulletin, index) { %>
-            <li><a href="/bulletin/delete/<%= index %>">✘</a> <%= bulletin %></li>
-        <% }); %>
-        </ul>
+            
+      
 
         </form>
+
+        <h3>Posts: </h3>
+       
+         <table>
+<% for(var i=0; i < "posts".length; i++) { %>
+   <tr>
+     <td><%= "posts"[i].user %></td>
+     <td><%= "posts"[i].post %></td>
+   </tr>
+<% } %>
+</table>
+
+
     </body>
 </html>
 
